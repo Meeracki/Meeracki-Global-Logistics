@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-[#0a0f0a] border-t border-white/10 text-gray-300 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          
+
           <div className="space-y-6">
             <Link href="/" className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
               <span className="text-brand-accent">Meeracki</span> Global
@@ -51,11 +51,25 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          
+
         </div>
 
         <div className="border-t border-white/10 mt-16 pt-8 text-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Meeracki Global Logistics Pvt. Ltd. All rights reserved.</p>
+          {/* <p>&copy; {new Date().getFullYear()} Meeracki Global Logistics Pvt. Ltd. All rights reserved.</p> */}
+
+          <p>
+            &copy; {new Date().getFullYear()} Meeracki Global Logistics Pvt. Ltd. All rights reserved. |
+            Designed by{" "}
+            <a
+              href="https://www.architchandrakar.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#C9A84C", textDecoration: "none", fontWeight: 500 }}
+            >
+              Archit Chandrakar
+            </a>
+          </p>
+
         </div>
       </div>
     </footer>

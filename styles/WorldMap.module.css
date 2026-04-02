@@ -1,0 +1,18 @@
+.mapContainer {
+  height: 500px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ✅ Make selector PURE using :global */
+:global(.animated-path) {
+  stroke-dasharray: 6 6;
+  animation: dashMove 1s linear infinite;
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
