@@ -24,53 +24,53 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-24 bg-white border-t border-gray-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+      <div className="w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-extrabold text-brand-secondary mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-extrabold text-brand-secondary mb-4">FREQUENTLY ASKED QUESTIONS</h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-             <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="border border-gray-200 rounded-xl overflow-hidden bg-white"
-             >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full text-left px-6 py-5 flex justify-between items-center bg-white hover:bg-gray-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
-                >
-                  <span className="font-bold text-lg text-brand-secondary pr-8">{faq.q}</span>
-                  <div className={`shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-brand-primary' : 'text-gray-400'}`}>
-                    {openIndex === index ? <Minus size={24} /> : <Plus size={24} />}
-                  </div>
-                </button>
-                <AnimatePresence>
-                  {openIndex === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      className="overflow-hidden bg-gray-50 border-t border-gray-100"
-                    >
-                       <p className="px-6 py-5 text-gray-600 leading-relaxed border-l-4 border-brand-primary ml-6 my-4 bg-white shadow-sm mr-6 rounded-r">
-                         {faq.a}
-                       </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-             </motion.div>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="border border-gray-200 rounded-xl overflow-hidden bg-white"
+            >
+              <button
+                onClick={() => toggleFaq(index)}
+                className="w-full text-left px-6 py-5 flex justify-between items-center bg-white hover:bg-gray-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
+              >
+                <span className="font-bold text-lg text-brand-secondary pr-8">{faq.q}</span>
+                <div className={`shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-brand-primary' : 'text-gray-400'}`}>
+                  {openIndex === index ? <Minus size={24} /> : <Plus size={24} />}
+                </div>
+              </button>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="overflow-hidden bg-gray-50 border-t border-gray-100"
+                  >
+                    <p className="px-6 py-5 text-gray-600 leading-relaxed border-l-4 border-brand-primary ml-6 my-4 bg-white shadow-sm mr-6 rounded-r">
+                      {faq.a}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
       </div>

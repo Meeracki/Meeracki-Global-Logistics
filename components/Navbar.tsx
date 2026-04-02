@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,7 +30,7 @@ export default function Navbar() {
   return (
     <nav
       className={`
-    fixed top-0 left-0 w-full z-50
+    fixed top-0 left-0 w-full z-100 
     transition-all duration-500
     ${isScrolled
           ? `
@@ -37,7 +38,7 @@ export default function Navbar() {
         backdrop-blur-xl 
         border-b border-white/10
         shadow-[0_10px_40px_rgba(0,0,0,0.3)]
-        py-3
+        py-5
         `
           : `
         bg-transparent 
@@ -49,7 +50,7 @@ export default function Navbar() {
       {/* Glow Effect */}
       {isScrolled && (
         <div className="absolute inset-0 rounded-2xl pointer-events-none">
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[200px] h-[100px] bg-green-400/20 blur-2xl"></div>
+          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[200px] h-[200px] bg-green-400/20 blur-2xl"></div>
         </div>
       )}
 
@@ -57,12 +58,10 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
 
           {/* Logo */}
-          <Link
-            href="#home"
-            className="text-2xl font-bold tracking-tight flex items-center gap-2"
-          >
-            <span className="text-brand-accent">Meeracki</span>
-            <span className="text-white drop-shadow-md">Global</span>
+          <Link href="#home" className="flex items-center gap-2">
+            <Image
+              src="/Meeracki-logo.png"
+              alt="Meeracki Global" width={160} height={40} priority className="h-17 ml-10 w-auto" />
           </Link>
 
           {/* Desktop Menu */}

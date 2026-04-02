@@ -15,8 +15,8 @@ const steps = [
 export default function DocumentationGuide() {
   return (
     <section id="docs" className="py-24 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+      <div className="w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -24,7 +24,7 @@ export default function DocumentationGuide() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-extrabold text-brand-secondary mb-4">
-             Documentation for Import & Export <span className="text-gray-400">|</span> Step by Step
+            DOCUMENTATION FOR IMPORT & EXPORT  STEP BY STEP
           </h2>
           <div className="w-24 h-1 bg-brand-primary mx-auto rounded-full"></div>
         </motion.div>
@@ -48,7 +48,7 @@ export default function DocumentationGuide() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-brand-secondary mb-1">
-                    <span className="text-brand-primary mr-2">{index + 1}.</span> 
+                    <span className="text-brand-primary mr-2">{index + 1}.</span>
                     {step.title}
                   </h3>
                   <p className="text-gray-600">

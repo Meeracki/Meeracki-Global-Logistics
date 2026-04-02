@@ -22,7 +22,7 @@ export default function WhyChooseUs() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4" style={{ color: '#000000' }}>
-            The Meeracki Advantage
+            THE MEERACKI ADVANTAGE
           </h2>
           <div className="w-24 h-1 mx-auto rounded-full" style={{ background: '#1A6B1A' }}></div>
         </motion.div>
