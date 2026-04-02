@@ -70,7 +70,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-white/90 hover:text-white font-medium text-sm transition"
+                className="text-black/90 hover:text-white font-semibold text-base tracking-wide transition"
                 onClick={(e) => {
                   e.preventDefault();
                   document
