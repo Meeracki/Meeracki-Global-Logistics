@@ -11,6 +11,11 @@ export default function Hero() {
     "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1494412685616-a5d310fbb07d?q=80&w=2070&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1581093588401-22c6f94d93a2?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1494412685616-a5d310fbb07d?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1581093588401-22c6f94d93a2?q=80&w=2070&auto=format&fit=crop",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,7 +23,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // 3 seconds
+    }, 3000); // change every 3 sec
 
     return () => clearInterval(interval);
   }, []);
@@ -28,14 +33,17 @@ export default function Hero() {
       id="home"
       className="relative h-screen w-full flex items-center justify-center overflow-hidden"
     >
-      {/* Background Images (Slider) */}
+      {/* ✅ Background Slider (FIXED - No Grey Flash) */}
       <div className="absolute inset-0 z-0">
         {images.map((img, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${index === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
-            style={{ backgroundImage: `url(${img})` }}
+            className="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms]"
+            style={{
+              backgroundImage: `url(${img})`,
+              opacity: index === currentIndex ? 1 : 0,
+              zIndex: index === currentIndex ? 1 : 0,
+            }}
           />
         ))}
 
@@ -63,8 +71,7 @@ export default function Hero() {
             className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6"
           >
             Reliable Global <br className="hidden md:block" />
-            <span className="text-white">Shipping & Logistics</span>{" "}
-            Solutions
+            <span className="text-white">Shipping & Logistics</span> Solutions
           </motion.h1>
 
           <motion.p
@@ -142,7 +149,7 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Bottom gradient */}
+      {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-brand-primary to-transparent z-10"></div>
     </section>
   );
