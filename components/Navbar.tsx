@@ -70,7 +70,8 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-black/90 hover:text-white font-semibold text-base tracking-wide transition"
+                className={`${isScrolled ? "text-black/90 hover:text-black" : "text-white hover:text-white/80"
+                  } font-semibold text-base tracking-wide transition`}
                 onClick={(e) => {
                   e.preventDefault();
                   document
