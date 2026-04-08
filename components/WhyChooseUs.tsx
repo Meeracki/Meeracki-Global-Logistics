@@ -8,7 +8,7 @@ const advantages = [
   { icon: "🔒", title: "Secure", desc: "Top-tier safety standards for all cargo." },
   { icon: "⏱️", title: "Timely", desc: "Strict adherence to agreed delivery schedules." },
   { icon: "📋", title: "Compliant", desc: "100% regulatory adherence across borders." },
-  { icon: "�", title: "Cost-Effective", desc: "Maximize ROI with optimized pricing and reduced overhead" },
+  { icon: "₹", title: "Cost-Effective", desc: "Maximize ROI with optimized pricing." },
 ];
 
 export default function WhyChooseUs() {
