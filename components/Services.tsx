@@ -36,12 +36,12 @@ const servicesList = [
   {
     icon: "🛢️",
     title: "Metal Scraping",
-    desc: "We deal in all types of metal scrap including HMS 1, HMS 2, Shredded Scrap, etc."
+    desc: "We deal in all types of metal scrap including HMS 1, HMS 2,Aluminium, Copper Shredded Scrap, etc."
   },
   {
     icon: "🌍",
     title: "International Sourcing",
-    desc: "We source all types of metal scrap including HMS 1, HMS 2, Shredded Scrap, etc."
+    desc: "We provide end-to-end export and import solutions across multiple sectors"
   },
 ];
 

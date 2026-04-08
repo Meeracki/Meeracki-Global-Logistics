@@ -36,7 +36,7 @@ export default function Contact() {
             </div>
             <h3 className="text-xl font-bold mb-2">Call Us</h3>
             <strong>Manish Tekwane</strong><p className="text-gray-300 font-medium">+91-9669510699</p>
-            <strong>Aakkash Kuranajekar</strong><p className="text-gray-300 font-medium">+91-9826710002</p>
+            <strong>Aakkash Kuranajekar</strong><p className="text-gray-300 font-medium">+91-9669516099</p>
           </motion.a>
 
           <motion.a
