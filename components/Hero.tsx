@@ -70,7 +70,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6"
           >
-            Reliable Global <br className="hidden md:block" />
+            Meeracki Global <br className="hidden md:block" />
             <span className="text-white">Shipping & Logistics</span> Solutions
           </motion.h1>
 
